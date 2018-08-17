@@ -1,0 +1,56 @@
+html {
+	font-size: 18px;
+}
+body {
+	margin: 0;
+	font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+/*** helpers ****/
+.no-margin {
+	margin: 0;
+}
+/*** end helpers ****/
+
+.header {
+	background: #000;
+	color: #fff;
+	padding: 20px 15px;
+}
+
+.movies-content {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+input#ratingInput {
+	border: 0;
+	width: 26px;
+	text-align: right;
+}
+
+#movies {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card {
+	display: flex;
+	margin-bottom: 20px;
+	box-shadow: 1px 1px 5px #ccc;
+}
+
+.card .info {
+	padding: 10px 15px 15px 15px;
+	position: relative;
+	width: 230px;
+}
+
+.card .info h1 {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+
+.card .info .more {
+	padding-top: 20px;
+}

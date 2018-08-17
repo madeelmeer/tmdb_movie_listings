@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+<title>TMDb Movies</title>
+<meta name="description" content="TMDb Movies">
+<meta name="keywords" content="TMDb Movies">
+
+
+
+
+<!-- Bootstrap minified -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- google font as used bt TMDb -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
+
+<!-- custom css and js -->
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="script.js"></script>
+
+
+
+</head>
+<body>
+
+<div id="primary-container" class="container">
+
+<header class="header">
+	<h1 class="no-margin clearfix">TMDb Movies
+	<span class="pull-right">
+		<img src="https://www.themoviedb.org/assets/1/v4/logos/powered-by-square-green-11c0c7f8e03c4f44aa54d5e91d9531aa9860a9161c49f5fa741b730c5b21a1f2.svg" width="80" />
+	</span>
+	</h1>
+</header>
+
+
+<section class="row movies-content">
+
+	<section class="col-xs-12 col-sm-3 filters">
+		<strong>Filter by</strong>
+		
+		<p><button class="btn btn-primary" onclick="filterResults();">Update Results</button></p>
+		
+		<hr />
+		
+		<div class="form-group">
+			<label>Genre: </label><br />
+			
+			<div id="all_genre">
+				
+				
+				
+			</div>
+		</div>
+		
+		<hr />
+		
+		<div class="form-group">
+			<label for="rating">Rating: </label>
+			<input type="text" id="ratingInput" name="ratingInput" readonly value="3" /> / 10
+			<input type="range" id="rating" name="rating" min="0" max="10" step="0.5" value="3" onchange="updateRatingInput(this.value);" />
+		</div>
+		
+		<hr />
+		
+		<button class="btn btn-primary" onclick="filterResults();">Update Results</button>
+	</section>
+	
+	
+	
+	
+	<section class="col-xs-12 col-sm-9">
+		<h2>Movies list</h2>
+		<section class="row" id="movies">Loading...</section>
+		
+	</section>
+
+
+</section>
+
+
+
+
+<footer>
+	&copy; TMDb Movies
+</footer>
+
+</div>
+
+</body>
+</html>
